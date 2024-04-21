@@ -1,5 +1,7 @@
+import './login.css';
+
 import { FcGoogle } from 'react-icons/fc';
-import { AiFillApple, AiOutlineEyeInvisible } from 'react-icons/ai';
+import { AiFillApple, AiOutlineEyeInvisible, AiOutlineEye } from 'react-icons/ai';
 
 function LogIn() {
   return (
@@ -25,13 +27,13 @@ function LogIn() {
             </div>
           </div>
           {/* email */}
-          <div className="social flex flex-col justify-center items-center mx-[120px] p-[48px] text-[var(--white)] font-semibold text-base border-b border-zinc-700">
+          <div className="email flex flex-col items-center mx-[120px] p-[48px] text-[var(--white)] font-semibold text-base border-b border-zinc-700">
             <div className="w-[360px] py-4 font-medium">
               <p className="text-sm my-2">Email or username</p>
               <input
                 type="email"
                 placeholder="Email or username"
-                className="p-2.5 w-full placeholder:text-[#a7a7a7] placeholder:text-base bg-[var(--background-color)] rounded-[8px] border border-gray-500 focus:outline-gray-50"
+                className="p-2.5 w-full placeholder:text-[#a7a7a7] placeholder:text-base bg-[var(--background-color)] rounded-[6px] border border-gray-500 focus:outline-gray-50"
               />
             </div>
             <div className="w-[360px] font-medium">
@@ -39,17 +41,33 @@ function LogIn() {
               <input
                 type="password"
                 placeholder="Password"
-                className="p-2.5 w-full placeholder:text-[#a7a7a7] placeholder:text-base bg-[var(--background-color)] rounded-[8px] border border-gray-500 focus:outline-gray-50"
+                className="p-2.5 w-full placeholder:text-[#a7a7a7] placeholder:text-base bg-[var(--background-color)] rounded-[6px] border border-gray-500 focus:outline-gray-50"
               />
               <div className="relative">
-                <AiOutlineEyeInvisible className="absolute right-[15px] top-[-35.5px] text-lg text-[#a7a7a7]" />
+                <AiOutlineEye className="hidden absolute right-[15px] top-[-35.5px] text-lg text-[#a7a7a7] cursor-pointer" />
+                <AiOutlineEyeInvisible className="absolute right-[15px] top-[-35.5px] text-lg text-[#a7a7a7] cursor-pointer" />
               </div>
             </div>
-            <button className="w-full bg-[#1ed760] text-[var(--background-color)] ">Log in</button>
+            <div className="switch-btn flex gap-3 items-center mt-4">
+              {/* <!-- Rounded switch --> */}
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider round"></span>
+              </label>
+              <span className="text-sm font-normal">Remember me</span>
+            </div>
+            <button className="w-[360px] mt-8 mb-3.5 p-2.5 bg-[#1ed760] text-[var(--background-color)] rounded-[36px] hover:scale-105 hover:brightness-110">
+              Log In
+            </button>
+            <div>
+              <a href="/forgot" className="font-medium text-sm text-[var(--white)] hover:text-[#1ed760] underline">
+                Forgot your password?
+              </a>
+            </div>
           </div>
           {/* sign up */}
-          <div className="social flex flex-col justify-center items-center gap-5 mx-[120px] p-[48px]">
-            <div className="py-4 flex justify-center items-center gap-2">
+          <div className="signup flex flex-col justify-center items-center gap-5 mx-[120px] p-[48px]">
+            <div className="py-4 flex justify-center items-center gap-2 font-medium">
               <p className="text-[#a7a7a7]">
                 Don't have an account?{' '}
                 <a href="/signup" className="text-[var(--white)] hover:text-[#1ed760] underline">
@@ -60,7 +78,19 @@ function LogIn() {
           </div>
         </div>
       </div>
-      <p className="text-orange-500">log in</p>
+      <div className="p-8 bg-[var(--background-color)]">
+        <p className="text-[#a7a7a7] text-xs text-center">
+          This site is protected by reCAPTCHA and the Google{' '}
+          <a className="text-[#a7a7a7] underline" href="https://policies.google.com/privacy">
+            Privacy Policy
+          </a>{' '}
+          and{' '}
+          <a className="text-[#a7a7a7] underline" href="https://policies.google.com/terms">
+            Terms of Service
+          </a>{' '}
+          apply.
+        </p>
+      </div>
     </div>
   );
 }

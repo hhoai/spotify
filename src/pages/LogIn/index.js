@@ -33,7 +33,7 @@ function LogIn() {
               <input
                 type="email"
                 placeholder="Email or username"
-                className="p-2.5 w-full placeholder:text-[#a7a7a7] placeholder:text-base bg-[var(--background-color)] rounded-[6px] border border-gray-500 focus:outline-gray-50"
+                className="py-2.5 px-4 w-full placeholder:text-[var(--text-color)] placeholder:text-base bg-[var(--background-color)] rounded-[6px] border border-gray-500 focus:outline-gray-50"
               />
             </div>
             <div className="w-[360px] font-medium">
@@ -41,20 +41,22 @@ function LogIn() {
               <input
                 type="password"
                 placeholder="Password"
-                className="p-2.5 w-full placeholder:text-[#a7a7a7] placeholder:text-base bg-[var(--background-color)] rounded-[6px] border border-gray-500 focus:outline-gray-50"
+                className="py-2.5 px-4 w-full placeholder:text-[var(--text-color)] placeholder:text-base bg-[var(--background-color)] rounded-[6px] border border-gray-500 focus:outline-gray-50"
               />
               <div className="relative">
-                <AiOutlineEye className="hidden absolute right-[15px] top-[-35.5px] text-lg text-[#a7a7a7] cursor-pointer" />
-                <AiOutlineEyeInvisible className="absolute right-[15px] top-[-35.5px] text-lg text-[#a7a7a7] cursor-pointer" />
+                <AiOutlineEye className="hidden absolute right-[15px] top-[-35.5px] text-lg text-[var(--text-color)] cursor-pointer" />
+                <AiOutlineEyeInvisible className="absolute right-[15px] top-[-35.5px] text-lg text-[var(--text-color)] cursor-pointer" />
               </div>
             </div>
-            <div className="switch-btn flex gap-3 items-center mt-4">
-              {/* <!-- Rounded switch --> */}
-              <label class="switch">
-                <input type="checkbox" />
-                <span class="slider round"></span>
-              </label>
-              <span className="text-sm font-normal">Remember me</span>
+            <div className="w-[360px] font-medium">
+              <div className="switch-btn flex gap-3 items-center mt-4">
+                {/* <!-- Rounded switch --> */}
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+                <span className="text-sm font-normal">Remember me</span>
+              </div>
             </div>
             <button className="w-[360px] mt-8 mb-3.5 p-2.5 bg-[#1ed760] text-[var(--background-color)] rounded-[36px] hover:scale-105 hover:brightness-110">
               Log In
@@ -68,7 +70,7 @@ function LogIn() {
           {/* sign up */}
           <div className="signup flex flex-col justify-center items-center gap-5 mx-[120px] p-[48px]">
             <div className="py-4 flex justify-center items-center gap-2 font-medium">
-              <p className="text-[#a7a7a7]">
+              <p className="text-[var(--text-color)]">
                 Don't have an account?{' '}
                 <a href="/signup" className="text-[var(--white)] hover:text-[#1ed760] underline">
                   Sign up for Spotify
@@ -79,13 +81,13 @@ function LogIn() {
         </div>
       </div>
       <div className="p-8 bg-[var(--background-color)]">
-        <p className="text-[#a7a7a7] text-xs text-center">
+        <p className="text-[var(--text-color)] text-xs text-center">
           This site is protected by reCAPTCHA and the Google{' '}
-          <a className="text-[#a7a7a7] underline" href="https://policies.google.com/privacy">
+          <a className="text-[var(--text-color)] underline" href="https://policies.google.com/privacy">
             Privacy Policy
           </a>{' '}
           and{' '}
-          <a className="text-[#a7a7a7] underline" href="https://policies.google.com/terms">
+          <a className="text-[var(--text-color)] underline" href="https://policies.google.com/terms">
             Terms of Service
           </a>{' '}
           apply.

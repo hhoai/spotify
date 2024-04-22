@@ -12,7 +12,7 @@ const publicRoutes = [
   { path: '/', component: Home },
   { path: '/search', component: Search },
   { path: '/upload', component: Upload, layout: HeaderOnly },
-  { path: '/signup', component: SignUp, layout: HeaderOnly },
+  { path: '/signup', component: SignUp, layout: null },
   { path: '/login', component: LogIn, layout: null },
   // { path: config.routes.search, component: Search, layout: null },
 ];
